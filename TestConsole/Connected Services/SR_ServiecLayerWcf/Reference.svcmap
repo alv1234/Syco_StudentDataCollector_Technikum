@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="980d497c-31ca-473d-8376-2e2a5b5b728d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8734/ServiceLayerWcfServiceDefinition/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="528ef0dc-6626-4479-9e36-13c7203c875a" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="42906d20-dccb-4bf8-a57b-d27e55c0fe74" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="3334d252-24ed-4183-9ad9-de86cbc17296" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="125fd23b-3bbf-425c-860e-b3fa2b01d7ee" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?disco" />
+    <MetadataFile FileName="ServiceLayerWcfServiceDefinition.wsdl" MetadataType="Wsdl" ID="8278f11e-822b-48a5-8fdc-4f91ab0175e5" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

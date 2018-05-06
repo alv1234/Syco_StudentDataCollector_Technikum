@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b2b295be-4da9-45c6-b138-0b1b52116742" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/WcfServiceDefinition/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WcfServiceDefinition.wsdl" MetadataType="Wsdl" ID="dbb3f729-daa2-4968-98a3-6d2b599e29fa" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceDefinition/?wsdl" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="846e7066-adb6-4e59-8655-7e19259aa89b" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceDefinition/?xsd=xsd0" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="f3c7fd14-aae6-474c-9578-381641f99270" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceDefinition/?xsd=xsd2" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="da0a5dcd-0e23-411b-ae75-9776226ada9c" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceDefinition/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="e8ddf8e9-5866-44c2-b60c-61dfa378b90e" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceDefinition/?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

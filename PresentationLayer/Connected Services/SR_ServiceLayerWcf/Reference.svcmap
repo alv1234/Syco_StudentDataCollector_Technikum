@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="79c7f3f6-5e7f-4246-8861-379703bd4d7a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8734/ServiceLayerWcfServiceDefinition/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="0b6e378d-61f5-4ddd-88a6-c77ae26de775" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="e0be9ffa-24a4-4f1a-85b5-49e0c3335376" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="dc7d183d-2c26-4f9c-a354-fadd50ab33d2" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="294881f1-b980-4338-8c5d-b3af4c506685" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?disco" />
+    <MetadataFile FileName="ServiceLayerWcfServiceDefinition.wsdl" MetadataType="Wsdl" ID="7ebf0ea6-8a9b-4d9c-b595-1a9e08a63fd5" SourceId="1" SourceUrl="http://localhost:8734/ServiceLayerWcfServiceDefinition/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
