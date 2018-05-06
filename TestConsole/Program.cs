@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestConsole.SR_PersonAsmx;
 using TestConsole.SR_ServiecLayerWcf;
 using TestConsole.SR_StudentServiceWcf;
 
@@ -22,8 +23,17 @@ namespace TestConsole
             //Testing ServiceLayer Service Host
             ServiceLayerWcfServiceDefinitionClient serviceLayerServiceClient = new ServiceLayerWcfServiceDefinitionClient();
             Console.WriteLine("Testing Service Layer Service");
-            var result2 = serviceLayerServiceClient.QueryStudents();
+            var result2 = serviceLayerServiceClient.QueryAll();
             Console.WriteLine(result2.ToString());
+
+            //Testin Person Service Host
+            AsmxServiceSoapClient personServiceClient = new AsmxServiceSoapClient();
+            Console.WriteLine("Testing Person Service");
+            var result3 = personServiceClient.QueryPersons();
+            Console.WriteLine(result3.ToString());
+
+            Console.ReadLine();
+
 
         }
     }

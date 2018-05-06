@@ -15,15 +15,15 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/StudentData")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PeopleModel", Namespace="http://schemas.datacontract.org/2004/07/DataLayer")]
     [System.SerializableAttribute()]
-    public partial class Student : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class PeopleModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private PresentationLayer.SR_ServiceLayerWcf.Address AddressField;
+        private string CityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstnameField;
@@ -32,7 +32,7 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
         private string LastnameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StudentIdField;
+        private string StreetField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -45,14 +45,14 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public PresentationLayer.SR_ServiceLayerWcf.Address Address {
+        public string City {
             get {
-                return this.AddressField;
+                return this.CityField;
             }
             set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
                 }
             }
         }
@@ -84,67 +84,6 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int StudentId {
-            get {
-                return this.StudentIdField;
-            }
-            set {
-                if ((this.StudentIdField.Equals(value) != true)) {
-                    this.StudentIdField = value;
-                    this.RaisePropertyChanged("StudentId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://schemas.datacontract.org/2004/07/StudentData")]
-    [System.SerializableAttribute()]
-    public partial class Address : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StreetField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Street {
             get {
                 return this.StreetField;
@@ -171,13 +110,13 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SR_ServiceLayerWcf.IServiceLayerWcfServiceDefinition")]
     public interface IServiceLayerWcfServiceDefinition {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudents", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudentsResponse")]
-        System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.Student> QueryStudents();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAll", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAllResponse")]
+        System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.PeopleModel> QueryAll();
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudents", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudentsResponse")]
-        System.IAsyncResult BeginQueryStudents(System.AsyncCallback callback, object asyncState);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAll", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAllResponse")]
+        System.IAsyncResult BeginQueryAll(System.AsyncCallback callback, object asyncState);
         
-        System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.Student> EndQueryStudents(System.IAsyncResult result);
+        System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.PeopleModel> EndQueryAll(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -186,19 +125,19 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class QueryStudentsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class QueryAllCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        public QueryStudentsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        public QueryAllCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
-        public System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.Student> Result {
+        public System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.PeopleModel> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.Student>)(this.results[0]));
+                return ((System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.PeopleModel>)(this.results[0]));
             }
         }
     }
@@ -207,11 +146,11 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class ServiceLayerWcfServiceDefinitionClient : System.ServiceModel.ClientBase<PresentationLayer.SR_ServiceLayerWcf.IServiceLayerWcfServiceDefinition>, PresentationLayer.SR_ServiceLayerWcf.IServiceLayerWcfServiceDefinition {
         
-        private BeginOperationDelegate onBeginQueryStudentsDelegate;
+        private BeginOperationDelegate onBeginQueryAllDelegate;
         
-        private EndOperationDelegate onEndQueryStudentsDelegate;
+        private EndOperationDelegate onEndQueryAllDelegate;
         
-        private System.Threading.SendOrPostCallback onQueryStudentsCompletedDelegate;
+        private System.Threading.SendOrPostCallback onQueryAllCompletedDelegate;
         
         public ServiceLayerWcfServiceDefinitionClient() {
         }
@@ -232,54 +171,54 @@ namespace PresentationLayer.SR_ServiceLayerWcf {
                 base(binding, remoteAddress) {
         }
         
-        public event System.EventHandler<QueryStudentsCompletedEventArgs> QueryStudentsCompleted;
+        public event System.EventHandler<QueryAllCompletedEventArgs> QueryAllCompleted;
         
-        public System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.Student> QueryStudents() {
-            return base.Channel.QueryStudents();
+        public System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.PeopleModel> QueryAll() {
+            return base.Channel.QueryAll();
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginQueryStudents(System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginQueryStudents(callback, asyncState);
+        public System.IAsyncResult BeginQueryAll(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginQueryAll(callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.Student> EndQueryStudents(System.IAsyncResult result) {
-            return base.Channel.EndQueryStudents(result);
+        public System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.PeopleModel> EndQueryAll(System.IAsyncResult result) {
+            return base.Channel.EndQueryAll(result);
         }
         
-        private System.IAsyncResult OnBeginQueryStudents(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            return this.BeginQueryStudents(callback, asyncState);
+        private System.IAsyncResult OnBeginQueryAll(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return this.BeginQueryAll(callback, asyncState);
         }
         
-        private object[] OnEndQueryStudents(System.IAsyncResult result) {
-            System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.Student> retVal = this.EndQueryStudents(result);
+        private object[] OnEndQueryAll(System.IAsyncResult result) {
+            System.Collections.Generic.List<PresentationLayer.SR_ServiceLayerWcf.PeopleModel> retVal = this.EndQueryAll(result);
             return new object[] {
                     retVal};
         }
         
-        private void OnQueryStudentsCompleted(object state) {
-            if ((this.QueryStudentsCompleted != null)) {
+        private void OnQueryAllCompleted(object state) {
+            if ((this.QueryAllCompleted != null)) {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.QueryStudentsCompleted(this, new QueryStudentsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.QueryAllCompleted(this, new QueryAllCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
         
-        public void QueryStudentsAsync() {
-            this.QueryStudentsAsync(null);
+        public void QueryAllAsync() {
+            this.QueryAllAsync(null);
         }
         
-        public void QueryStudentsAsync(object userState) {
-            if ((this.onBeginQueryStudentsDelegate == null)) {
-                this.onBeginQueryStudentsDelegate = new BeginOperationDelegate(this.OnBeginQueryStudents);
+        public void QueryAllAsync(object userState) {
+            if ((this.onBeginQueryAllDelegate == null)) {
+                this.onBeginQueryAllDelegate = new BeginOperationDelegate(this.OnBeginQueryAll);
             }
-            if ((this.onEndQueryStudentsDelegate == null)) {
-                this.onEndQueryStudentsDelegate = new EndOperationDelegate(this.OnEndQueryStudents);
+            if ((this.onEndQueryAllDelegate == null)) {
+                this.onEndQueryAllDelegate = new EndOperationDelegate(this.OnEndQueryAll);
             }
-            if ((this.onQueryStudentsCompletedDelegate == null)) {
-                this.onQueryStudentsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnQueryStudentsCompleted);
+            if ((this.onQueryAllCompletedDelegate == null)) {
+                this.onQueryAllCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnQueryAllCompleted);
             }
-            base.InvokeAsync(this.onBeginQueryStudentsDelegate, null, this.onEndQueryStudentsDelegate, this.onQueryStudentsCompletedDelegate, userState);
+            base.InvokeAsync(this.onBeginQueryAllDelegate, null, this.onEndQueryAllDelegate, this.onQueryAllCompletedDelegate, userState);
         }
     }
 }

@@ -43,13 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\SR_PersonAsmx\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\SR_StudentWcf\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="PeopleModel.cs" />
     <Compile Include="ServiceManager.cs" />
-    <Compile Include="StudentServiceConsumer.cs" />
+    <Compile Include="DataServiceConsumer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +64,10 @@
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SR_PersonAsmx\AsmxService.wsdl" />
+    <None Include="Connected Services\SR_PersonAsmx\DataLayer.SR_PersonAsmx.Person.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SR_StudentWcf\DataLayer.SR_StudentWcf.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -74,6 +84,7 @@
     <None Include="Connected Services\SR_StudentWcf\WcfServiceDefinition.wsdl" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\SR_PersonAsmx\" />
     <WCFMetadataStorage Include="Connected Services\SR_StudentWcf\" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +98,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\SR_StudentWcf\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SR_PersonAsmx\AsmxService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SR_PersonAsmx\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SR_PersonAsmx\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SR_PersonAsmx\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

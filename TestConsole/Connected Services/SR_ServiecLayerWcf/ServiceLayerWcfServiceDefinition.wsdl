@@ -4,25 +4,25 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/StudentData" />
+      <xsd:import schemaLocation="http://localhost:8734/ServiceLayerWcfServiceDefinition/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataLayer" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IServiceLayerWcfServiceDefinition_QueryStudents_InputMessage">
-    <wsdl:part name="parameters" element="tns:QueryStudents" />
+  <wsdl:message name="IServiceLayerWcfServiceDefinition_QueryAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAll" />
   </wsdl:message>
-  <wsdl:message name="IServiceLayerWcfServiceDefinition_QueryStudents_OutputMessage">
-    <wsdl:part name="parameters" element="tns:QueryStudentsResponse" />
+  <wsdl:message name="IServiceLayerWcfServiceDefinition_QueryAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceLayerWcfServiceDefinition">
-    <wsdl:operation name="QueryStudents">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudents" message="tns:IServiceLayerWcfServiceDefinition_QueryStudents_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudentsResponse" message="tns:IServiceLayerWcfServiceDefinition_QueryStudents_OutputMessage" />
+    <wsdl:operation name="QueryAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAll" message="tns:IServiceLayerWcfServiceDefinition_QueryAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAllResponse" message="tns:IServiceLayerWcfServiceDefinition_QueryAll_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceLayerWcfServiceDefinition" type="tns:IServiceLayerWcfServiceDefinition">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="QueryStudents">
-      <soap:operation soapAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudents" style="document" />
+    <wsdl:operation name="QueryAll">
+      <soap:operation soapAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAll" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

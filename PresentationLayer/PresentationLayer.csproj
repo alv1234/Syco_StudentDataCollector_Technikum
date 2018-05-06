@@ -118,7 +118,7 @@
     <None Include="Connected Services\SR_ServiceLayerWcf\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\SR_ServiceLayerWcf\PresentationLayer.SR_ServiceLayerWcf.Student.datasource">
+    <None Include="Connected Services\SR_ServiceLayerWcf\PresentationLayer.SR_ServiceLayerWcf.PeopleModel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SR_ServiceLayerWcf\ServiceLayerWcfServiceDefinition.wsdl" />

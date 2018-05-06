@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentServiceHost", "StudentServiceHost\StudentServiceHost.csproj", "{636F6CB2-CAE9-4288-AF96-25665ABC282D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{C27F4947-B906-4511-9F6F-2A96DA6480C2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0C5A8EA1-96FB-4141-927B-2102F4689C74} = {0C5A8EA1-96FB-4141-927B-2102F4689C74}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayerServiceDefinition", "ServiceLayerServiceDefinition\ServiceLayerServiceDefinition.csproj", "{6503B176-A030-43AE-8A15-A0D0D03A6BE3}"
 EndProject
@@ -18,6 +21,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "PresentationLayer\PresentationLayer.csproj", "{52090094-D8DD-43FA-B395-795789BF3000}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{F7CB550F-3A66-4FEB-964E-9DC7F3E7FD5D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0C5A8EA1-96FB-4141-927B-2102F4689C74} = {0C5A8EA1-96FB-4141-927B-2102F4689C74}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonData", "PersonData\PersonData.csproj", "{C6FE9D35-9428-41B0-8750-FA9D580378C2}"
 EndProject

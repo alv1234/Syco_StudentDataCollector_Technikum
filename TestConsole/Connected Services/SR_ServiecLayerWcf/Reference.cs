@@ -15,15 +15,15 @@ namespace TestConsole.SR_ServiecLayerWcf {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Student", Namespace="http://schemas.datacontract.org/2004/07/StudentData")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PeopleModel", Namespace="http://schemas.datacontract.org/2004/07/DataLayer")]
     [System.SerializableAttribute()]
-    public partial class Student : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class PeopleModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private TestConsole.SR_ServiecLayerWcf.Address AddressField;
+        private string CityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstnameField;
@@ -32,7 +32,7 @@ namespace TestConsole.SR_ServiecLayerWcf {
         private string LastnameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StudentIdField;
+        private string StreetField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -45,14 +45,14 @@ namespace TestConsole.SR_ServiecLayerWcf {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TestConsole.SR_ServiecLayerWcf.Address Address {
+        public string City {
             get {
-                return this.AddressField;
+                return this.CityField;
             }
             set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
                 }
             }
         }
@@ -84,67 +84,6 @@ namespace TestConsole.SR_ServiecLayerWcf {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int StudentId {
-            get {
-                return this.StudentIdField;
-            }
-            set {
-                if ((this.StudentIdField.Equals(value) != true)) {
-                    this.StudentIdField = value;
-                    this.RaisePropertyChanged("StudentId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://schemas.datacontract.org/2004/07/StudentData")]
-    [System.SerializableAttribute()]
-    public partial class Address : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StreetField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string City {
-            get {
-                return this.CityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CityField, value) != true)) {
-                    this.CityField = value;
-                    this.RaisePropertyChanged("City");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Street {
             get {
                 return this.StreetField;
@@ -171,11 +110,11 @@ namespace TestConsole.SR_ServiecLayerWcf {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="SR_ServiecLayerWcf.IServiceLayerWcfServiceDefinition")]
     public interface IServiceLayerWcfServiceDefinition {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudents", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudentsResponse")]
-        TestConsole.SR_ServiecLayerWcf.Student[] QueryStudents();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAll", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAllResponse")]
+        TestConsole.SR_ServiecLayerWcf.PeopleModel[] QueryAll();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudents", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryStudentsResponse")]
-        System.Threading.Tasks.Task<TestConsole.SR_ServiecLayerWcf.Student[]> QueryStudentsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAll", ReplyAction="http://tempuri.org/IServiceLayerWcfServiceDefinition/QueryAllResponse")]
+        System.Threading.Tasks.Task<TestConsole.SR_ServiecLayerWcf.PeopleModel[]> QueryAllAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -205,12 +144,12 @@ namespace TestConsole.SR_ServiecLayerWcf {
                 base(binding, remoteAddress) {
         }
         
-        public TestConsole.SR_ServiecLayerWcf.Student[] QueryStudents() {
-            return base.Channel.QueryStudents();
+        public TestConsole.SR_ServiecLayerWcf.PeopleModel[] QueryAll() {
+            return base.Channel.QueryAll();
         }
         
-        public System.Threading.Tasks.Task<TestConsole.SR_ServiecLayerWcf.Student[]> QueryStudentsAsync() {
-            return base.Channel.QueryStudentsAsync();
+        public System.Threading.Tasks.Task<TestConsole.SR_ServiecLayerWcf.PeopleModel[]> QueryAllAsync() {
+            return base.Channel.QueryAllAsync();
         }
     }
 }

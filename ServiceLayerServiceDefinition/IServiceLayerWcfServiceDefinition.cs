@@ -1,4 +1,5 @@
-﻿using DataLayer.SR_StudentWcf;
+﻿using DataLayer;
+using DataLayer.SR_StudentWcf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,6 @@ namespace ServiceLayerServiceDefinition
     public interface IServiceLayerWcfServiceDefinition
     {
         [OperationContract]
-        List<Student> QueryStudents();
+        List<PeopleModel> QueryAll();
     }
 }

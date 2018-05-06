@@ -7,27 +7,27 @@ namespace PresentationLayer.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        private ObservableCollection<Student> students;
-        public ObservableCollection<Student> Students
+        private ObservableCollection<PeopleModel> people;
+        public ObservableCollection<PeopleModel> People
         {
-            get { return students; }
-            set { students = value; RaisePropertyChanged(); }
+            get { return people; }
+            set { people = value; RaisePropertyChanged(); }
         }
 
         ServiceLayerWcfServiceDefinitionClient client = new ServiceLayerWcfServiceDefinitionClient();
 
         public MainViewModel()
         {
-            Students = new ObservableCollection<Student>();
+            People = new ObservableCollection<PeopleModel>();
             GenerateDummyData();
 
         }
 
         private void GenerateDummyData()
         {
-            foreach (var item in client.QueryStudents())
+            foreach (var item in client.QueryAll())
             {
-                students.Add((Student)item);
+                people.Add((PeopleModel)item);
             }
 
         }

@@ -12,12 +12,12 @@ namespace ServiceLayerServiceDefinition
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ServiceLayerWcfServiceDefinition" in both code and config file together.
     public class ServiceLayerWcfServiceDefinition : IServiceLayerWcfServiceDefinition
     {
-        List<Student> students = new List<Student>();
-        StudentServiceConsumer dl = new StudentServiceConsumer();
+        List<PeopleModel> people = new List<PeopleModel>();
+        DataServiceConsumer dl = new DataServiceConsumer();
 
-        public List<Student> QueryStudents()
+        public List<PeopleModel> QueryAll()
         {
-            return dl.QueryStudents();
+            return dl.QueryAll();
         }
 
     }
