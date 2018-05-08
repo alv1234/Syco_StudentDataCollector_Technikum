@@ -11,7 +11,7 @@
         <ViewModel:MainViewModel/>
     </Window.DataContext>
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="204" VerticalAlignment="Top" Width="201" Margin="27,67,0,0" ItemsSource="{Binding Students}"/>
+        <DataGrid HorizontalAlignment="Left" Height="204" VerticalAlignment="Top" Width="201" Margin="27,67,0,0" ItemsSource="{Binding People}"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="90,289,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>

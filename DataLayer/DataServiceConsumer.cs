@@ -14,7 +14,13 @@ namespace DataLayer
 
         public List<PeopleModel> QueryAll()
         {
-            var result = ServiceManager.CreateServiceClient<IWcfServiceDefinitionChannel>("BasicHttpBinding_IWcfServiceDefinition").QueryStudents();
+            //clean alternative
+            //var result = ServiceManager.CreateServiceClient<IWcfServiceDefinitionChannel>("BasicHttpBinding_IWcfServiceDefinition").QueryStudents();
+
+            //Quick'n'dirty alternative (copy config to client exe config)
+            WcfServiceDefinitionClient client = new WcfServiceDefinitionClient();
+            var result = client.QueryStudents();
+
             foreach (var item in result)
             {
                 people.Add(new PeopleModel(item.Firstname, item.Lastname, item.Address.Street, item.Address.City));
